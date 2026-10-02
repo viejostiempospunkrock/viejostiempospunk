@@ -1,5 +1,18 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Viejos Tiempos Punk Rock | Sitio Oficial</title><meta name="description" content="Viejos Tiempos Punk Rock — Río Grande, Tierra del Fuego, Argentina."><link rel="stylesheet" href="styles.css"><style>
 .cinematic{min-height:calc(100vh - 65px);position:relative;overflow:hidden;background:#050505}.hero-video{position:absolute;inset:0;overflow:hidden;background:#050505}.hero-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.hero-vignette{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.45) 50%,rgba(0,0,0,.25) 100%),linear-gradient(0deg,rgba(0,0,0,.8),transparent 55%);z-index:1}.hero-content{position:relative;z-index:2}.cinematic h1{text-shadow:0 5px 30px #000}.cinematic .lead{color:#eee}.hero-title{display:inline-flex;flex-direction:column;align-items:flex-start;position:relative;overflow:hidden;padding:10px 18px 14px 0}.hero-title span{position:relative;display:block;line-height:.86;text-transform:uppercase}.hero-title .title-main{font-size:1em;color:#fff;letter-spacing:.015em}.hero-title .title-sub{font-size:.48em;color:#e21b23;letter-spacing:.13em;margin-top:.12em;text-shadow:0 0 16px rgba(226,27,35,.42)}.hero-title .title-main,.hero-title .title-sub{animation:titleGlow 5.5s ease-in-out infinite}.hero-title .title-sub{animation-delay:.25s}@keyframes titleGlow{0%,68%,100%{filter:brightness(1);text-shadow:inherit}76%{filter:brightness(1.12);text-shadow:0 0 10px rgba(255,255,255,.2),0 0 24px rgba(255,255,255,.08)}82%{filter:brightness(1.35);text-shadow:0 0 14px rgba(255,255,255,.42),0 0 32px rgba(255,255,255,.14)}88%{filter:brightness(1);text-shadow:inherit}}@media(prefers-reduced-motion:reduce){.hero-title .title-main,.hero-title .title-sub{animation:none}}.sound-toggle{position:absolute;right:24px;bottom:24px;z-index:4;background:rgba(0,0,0,.7);border:1px solid rgba(255,255,255,.45);color:#fff;padding:12px 16px;font:800 .72rem Inter,Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;backdrop-filter:blur(8px)}.sound-toggle:hover{border-color:#e21b23}.image-hero{background-size:cover;background-position:center;position:relative}.image-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.3)),linear-gradient(0deg,rgba(0,0,0,.7),transparent)}.image-hero .hero-in{position:relative;z-index:1}
+ 
+.home-cards .card{position:relative;overflow:hidden;isolation:isolate;transition:border-color .35s ease,transform .35s ease,background .35s ease}
+.home-cards .card::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.08) 42%,rgba(255,255,255,.24) 50%,rgba(255,255,255,.08) 58%,transparent 100%);transform:translateX(-130%);z-index:2;pointer-events:none}
+.home-cards .card::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.68) 42%,rgba(0,0,0,.34) 100%);z-index:1;transition:opacity .45s ease}
+.home-card-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease;z-index:0}
+.home-cards .card h3,.home-cards .card p{position:relative;z-index:3}
+.home-cards .card:hover{transform:translateY(-3px);border-color:#777}
+.home-cards .card:hover::before{animation:cardLightSweep .9s ease-out}
+.home-cards .card:hover::after{opacity:.42}
+.home-cards .card:hover .home-card-video{opacity:1}
+@keyframes cardLightSweep{from{transform:translateX(-130%)}to{transform:translateX(130%)}}
+@media(prefers-reduced-motion:reduce){.home-cards .card:hover::before{animation:none}.home-cards .card{transition:none}}
+@media(max-width:750px){.home-card-video{display:none}.home-cards .card::after{opacity:0}}
 </style></head><body><nav class="top"><div class="nav"><a class="logo logo-image" href="index.html"><img src="media/vtpr.png" alt="Viejos Tiempos Punk Rock"><span class="official-label">VIEJOS TIEMPOS PUNK ROCK <em>· PÁGINA OFICIAL</em></span></a><div class="links"><a class="active" href="index.html">Inicio</a><a href="videos.html">Videos</a><a href="fotos.html">Fotos</a><a href="musica.html">Música</a><a href="recitales.html">Recitales</a><a href="biografia.html">Biografía</a><a href="redes.html">Redes</a></div></div></nav><header class="hero cinematic">
 <div class="hero-video" aria-hidden="true"><video id="heroClip" autoplay muted loop playsinline preload="auto"><source src="hero/clip.mp4" type="video/mp4"></video></div>
 <div class="hero-vignette"></div>
@@ -9,4 +22,27 @@
 <script>
 (function(){const v=document.getElementById('heroClip'),b=document.getElementById('soundToggle');b.addEventListener('click',function(){v.muted=!v.muted;b.textContent=v.muted?'🔇 Activar sonido':'🔊 Silenciar';b.setAttribute('aria-label',v.muted?'Activar sonido':'Silenciar');if(!v.muted)v.play().catch(()=>{});});})();
 </script>
-<main><h2>La banda</h2><p class="lead">Viejos Tiempos Punk Rock, es una banda argentina formada en 2008. Su propuesta se basa en composiciones cuidadas, guitarras trabajadas y arreglos que equilibran energía y estructura, acompañados por letras elaboradas que combinan reflexión, crítica y experiencias.</p><div class="grid" style="margin-top:40px"><a class="card" href="musica.html"><h3>Música</h3><p>Temas y reproducción integrada.</p></a><a class="card" href="videos.html"><h3>Videos</h3><p>Videos oficiales para ver directamente.</p></a><a class="card" href="fotos.html"><h3>Fotos</h3><p>Archivo fotográfico y repositorios públicos.</p></a><a class="card" href="recitales.html"><h3>Recitales</h3><p>Fechas y archivo de presentaciones.</p></a><a class="card" href="redes.html"><h3>Redes</h3><p>Canales oficiales y perfiles sociales.</p></a><a class="card" href="biografia.html"><h3>Biografía</h3><p>Historia, trayectoria y perfil de la banda.</p></a></div></main><footer><div class="footname">VIEJOS TIEMPOS PUNK ROCK</div>Río Grande · Tierra del Fuego · Argentina<br>Contacto: <a href="mailto:viejostiempospunkrock@gmail.com">viejostiempospunkrock@gmail.com</a><br>© 2026 — Sitio oficial</footer></body></html>
+<main><h2>La banda</h2><p class="lead">Viejos Tiempos Punk Rock, es una banda argentina formada en 2008. Su propuesta se basa en composiciones cuidadas, guitarras trabajadas y arreglos que equilibran energía y estructura, acompañados por letras elaboradas que combinan reflexión, crítica y experiencias.</p><div class="grid home-cards" style="margin-top:40px">
+<a class="card" href="musica.html" data-video="media/boton-musica.mp4"><video class="home-card-video" muted loop playsinline preload="metadata" aria-hidden="true"></video><h3>Música</h3><p>Temas y reproducción integrada.</p></a>
+<a class="card" href="videos.html" data-video="media/boton-videos.mp4"><video class="home-card-video" muted loop playsinline preload="metadata" aria-hidden="true"></video><h3>Videos</h3><p>Videos oficiales para ver directamente.</p></a>
+<a class="card" href="fotos.html" data-video="media/boton-fotos.mp4"><video class="home-card-video" muted loop playsinline preload="metadata" aria-hidden="true"></video><h3>Fotos</h3><p>Archivo fotográfico y repositorios públicos.</p></a>
+<a class="card" href="recitales.html" data-video="media/boton-recitales.mp4"><video class="home-card-video" muted loop playsinline preload="metadata" aria-hidden="true"></video><h3>Recitales</h3><p>Fechas y archivo de presentaciones.</p></a>
+<a class="card" href="redes.html" data-video="media/boton-redes.mp4"><video class="home-card-video" muted loop playsinline preload="metadata" aria-hidden="true"></video><h3>Redes</h3><p>Canales oficiales y perfiles sociales.</p></a>
+<a class="card" href="biografia.html" data-video="media/boton-biografia.mp4"><video class="home-card-video" muted loop playsinline preload="metadata" aria-hidden="true"></video><h3>Biografía</h3><p>Historia, trayectoria y perfil de la banda.</p></a>
+</div></main><footer><div class="footname">VIEJOS TIEMPOS PUNK ROCK</div>Río Grande · Tierra del Fuego · Argentina<br>Contacto: <a href="mailto:viejostiempospunkrock@gmail.com">viejostiempospunkrock@gmail.com</a><br>© 2026 — Sitio oficial</footer><script>
+(function(){
+  const cards=document.querySelectorAll('.home-cards .card');
+  cards.forEach(card=>{
+    const video=card.querySelector('.home-card-video');
+    const src=card.dataset.video;
+    if(!video||!src)return;
+    const source=document.createElement('source');
+    source.src=src; source.type='video/mp4'; video.appendChild(source);
+    card.addEventListener('mouseenter',()=>{video.currentTime=0;video.play().catch(()=>{});});
+    card.addEventListener('mouseleave',()=>{video.pause();video.currentTime=0;});
+    card.addEventListener('focusin',()=>{video.currentTime=0;video.play().catch(()=>{});});
+    card.addEventListener('focusout',()=>{video.pause();video.currentTime=0;});
+    video.addEventListener('error',()=>{video.style.display='none';});
+  });
+})();
+</script></body></html>
